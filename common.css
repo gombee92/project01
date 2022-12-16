@@ -1,0 +1,684 @@
+@charset "utf-8";
+@import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-size: 16px;
+  --bg-c1: #f2ece0;
+  --main-c1: #a8996e;
+  --sub-c1: #ffffff;
+  --font01: #565656;
+  --font02: #979797;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font01);
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: "RIDIBatang";
+}
+
+.mw {
+  width: calc(100% - 4rem);
+  max-width: 1200px;
+  margin: auto;
+}
+
+/******* 플로팅 메뉴 *******/
+
+.floating_menu {
+  position: absolute;
+  position: fixed;
+  bottom: 30%;
+  right: 0;
+  z-index: 100;
+  color: var(--font01);
+}
+
+.floating_menu li {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sub-c1);
+}
+
+.floating_menu i {
+  padding-top: 5px;
+  font-size: 2rem;
+}
+
+.floating_menu p {
+  font-size: 0.8rem;
+}
+
+.floating_menu a {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  color: transparent;
+}
+
+/******* 플로팅 끝 *******/
+
+/******* 헤더 시작 *******/
+
+.hd {
+  position: relative;
+}
+
+.hd_top {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hd_top .login {
+  padding-right: 0.7rem;
+}
+
+.hd_top .login a:hover {
+  color: var(--main-c1);
+}
+
+.hd_top .sh {
+  width: 150px;
+  height: 25px;
+  border: 1px solid var(--font01);
+  border-radius: 5px;
+}
+
+.hd_bottom {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.hd_bottom img {
+  display: flex;
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.gnb {
+  height: 2rem;
+  display: flex;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 35%;
+  right: -0.5rem;
+  z-index: 900;
+  text-align: center;
+}
+
+.gnb a {
+  padding: 1rem;
+}
+
+.gnb a:hover {
+  color: #a8996e;
+}
+
+.sub {
+  height: 0px;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 0.7rem;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.sub a {
+  margin-top: 0rem;
+  padding: 0.5rem;
+  align-items: center;
+  display: block;
+  text-align: center;
+  background-color: var(--sub-c1);
+}
+
+.gnb li:hover .sub {
+  height: 200px;
+}
+
+.sub a:hover {
+  background-color: var(--main-c1);
+  color: var(--sub-c1);
+}
+
+/******* 헤더 끝 *******/
+
+/******* 섹션1 시작 *******/
+
+.sec1 {
+  background-color: var(--bg-c1);
+  position: relative;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.left {
+  width: 60%;
+}
+
+.info_img {
+  padding: 50px;
+}
+
+.info_img > div {
+  width: 20%;
+}
+
+.info_img > div img {
+  position: relative;
+  width: 120%;
+  left: -5%;
+  transition: 0.5s;
+}
+
+.info_img > div img:hover {
+  transform: scale(110%);
+}
+
+.info_img > p {
+  padding: 50px 50px 0;
+  font-size: 1.35rem;
+  width: 100%;
+  color: var(--font01);
+  line-height: 1.5rem;
+}
+
+.info_img,
+.img_trophy {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.info_main {
+  width: 40%;
+}
+
+.info_main img {
+  transition: 0.5s;
+}
+
+.info_main img:hover {
+  transform: scale(110%);
+}
+
+.info_main p {
+  position: relative;
+  margin-top: -160px;
+  padding-left: 15%;
+  font-size: 1.5rem;
+  color: var(--font01);
+  text-align: left;
+  line-height: 2rem;
+}
+
+.info_main .text_title::before {
+  content: "";
+  position: relative;
+  background-color: var(--font01);
+  display: flex;
+  width: 5px;
+  height: 6rem;
+  top: -4rem;
+  left: 3rem;
+}
+
+.img_trophy {
+  order: 1;
+}
+
+.img_trophy > div {
+  width: 15%;
+  margin: 10px 5px;
+}
+
+.img_trophy p {
+  color: var(--font01);
+  font-size: 0.75rem;
+}
+
+/******* 섹션1 끝 *******/
+
+/******* 섹션2 시작 *******/
+
+.sec2 > article {
+  margin: 5vh 0 5vh;
+  height: 40vh;
+  display: flex;
+  margin: 5rem 0;
+  color: var(--font01);
+  line-height: 1.7rem;
+}
+
+.sec2 .content:nth-of-type(1) {
+  flex-direction: row-reverse;
+}
+
+.title1 h2,
+.title2 h2 {
+  margin-bottom: 1rem;
+}
+
+.title2 h2,
+.title2 p {
+  text-align: right;
+}
+
+.content .title1,
+.content .title2 {
+  width: 50%;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+}
+
+.content .h_h::before,
+.content .d_f::after {
+  content: "";
+  display: inline-block;
+  background-color: var(--font01);
+  margin: 0 5px 0;
+  width: 0.3rem;
+  height: 30px;
+}
+
+.content .sec2_img {
+  justify-content: center;
+  margin-left: 5rem;
+}
+
+.content img {
+  width: 40%;
+}
+
+.content img:last-child {
+  position: relative;
+  top: 50px;
+}
+
+.content .sec2_img2 {
+  margin: auto;
+}
+
+/******* 섹션2 끝 *******/
+
+/*******섹션3 시작 *******/
+.sec3 {
+  background-color: var(--bg-c1);
+  position: relative;
+  display: flex;
+  color: var(--font01);
+  justify-content: center;
+}
+
+.sec3 .thir_info {
+  margin-top: 200px;
+}
+
+.thir_con {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.thir_con:nth-of-type(2) {
+  position: relative;
+  margin-left: 10rem;
+}
+
+.thir_con > div {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.thir_con img {
+  width: 300px;
+  transform: translate(-30%, -10%);
+  transition: 0.5s;
+}
+
+.thir_con img:hover {
+  opacity: 80%;
+}
+
+.thir_con p {
+  font-size: 1.2rem;
+  margin-left: 3rem;
+}
+
+.thir_con p::before {
+  content: "";
+  background-color: var(--font01);
+  position: absolute;
+  display: block;
+  margin-left: -10px;
+  width: 3px;
+  height: 40px;
+}
+
+.sec3 .strength img {
+  width: 15%;
+}
+
+.sec3 .strength {
+  position: relative;
+  top: 100px;
+  width: 800px;
+  height: 800px;
+  background-image: url(./img/Clip.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  color: var(--main-c1);
+}
+
+.sec3 h2 {
+  position: relative;
+  top: 100px;
+  left: 250px;
+  display: inline-block;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--font01);
+}
+
+.sec3 ul {
+  position: relative;
+  top: 150px;
+  left: 200px;
+}
+
+.sec3 li {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sec3 .s_con {
+  position: relative;
+  top: 1.5rem;
+  left: 2rem;
+}
+
+.sec3 li p {
+  margin: 10px 0;
+}
+
+.sec3 strong {
+  font-size: 1.5rem;
+  padding-left: 10px;
+}
+
+.sec3 li strong::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--main-c1);
+  width: 3px;
+  height: 25px;
+}
+/******* 섹션3 끝 *******/
+
+/******* 섹션4 시작 *******/
+
+.sec4 {
+  position: relative;
+  color: var(--font01);
+}
+
+.sec4 h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 150px 0 50px;
+}
+
+.sec4 h1::before {
+  content: "";
+  display: inline-block;
+  background-color: var(--font01);
+  width: 3px;
+  height: 2rem;
+  margin: 0 10px;
+}
+
+.sec4 .menu_slide {
+  /* border: 1px solid red; */
+  position: relative;
+  width: 90%;
+  padding: 10px;
+}
+
+.sec4 .swiper-slide {
+  position: relative;
+  border-radius: 20px;
+  height: 300px;
+  box-shadow: 0 3px 3px var(--font02);
+  transition: 0.2s;
+}
+
+.sec4 .swiper-slide:hover {
+  background-color: var(--main-c1);
+  color: var(--sub-c1);
+}
+
+.sec4 .main_menu {
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-slide p:nth-of-type(1) {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.swiper-slide p:nth-of-type(2) {
+  text-align: start;
+  font-size: 0.9rem;
+  width: 230px;
+  margin-left: 10%;
+  line-height: 15px;
+}
+
+.sec4 a {
+  position: absolute;
+  background-color: transparent;
+  color: transparent;
+  display: block;
+  width: 100%;
+  height: 300px;
+  top: 0;
+}
+
+.sec4 img {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.sec4 .prev1 {
+  position: relative;
+  bottom: 150px;
+  left: 0px;
+  background: url(./img/play.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  transform: scaleX(-1);
+}
+
+.sec4 .next1 {
+  position: absolute;
+  right: 0;
+  top: 250px;
+  background: url(./img/play.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.sec4 .prev1::after,
+.sec4 .next1::after {
+  display: none;
+}
+
+.sec4 .swiper-slide {
+  background-color: var(--bg-c1);
+}
+
+/******* 섹션4 끝 *******/
+
+/******* 푸터 시작 *******/
+footer {
+  color: var(--font01);
+  background-color: var(--bg-c1);
+  margin-top: 5%;
+  height: 20vh;
+  padding-top: 5px;
+}
+
+.f_inner {
+  position: relative;
+}
+
+.address {
+  display: flex;
+  margin: 15px 0;
+}
+
+.address li {
+  font-size: 1.2rem;
+  padding-right: 30px;
+}
+
+.address li a:last-child:hover {
+  color: var(--main-c1);
+}
+
+.foot_bottom {
+  position: absolute;
+  top: 60px;
+  display: inline-block;
+  line-height: 150%;
+}
+
+.copy {
+  color: var(--font02);
+}
+
+.sns_icon {
+  flex-direction: column;
+  position: absolute;
+  width: 50px;
+  top: -10px;
+  right: 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.sns_icon a:hover {
+  color: var(--main-c1);
+}
+
+.sns_icon .fa-brands,
+.sns_icon .fa-solid {
+  border: 2px solid var(--font01);
+  border-radius: 50px;
+  background-color: var(--sub-c1);
+  width: 40px;
+  height: 40px;
+  margin: 2px 0;
+  padding-top: 6px;
+  padding-left: 3px;
+  text-align: center;
+}
+
+/******* 배경 애니메이션 *******/
+/******* 배경 애니메이션 *******/
+
+.sec1.bg::before,
+footer.bg::after {
+  display: none;
+}
+
+.bg::before,
+.bg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: calc(100vw - 18px);
+  height: 300px;
+  background-image: url(./img/bg.svg);
+  background-size: 100%;
+  background-repeat: repeat-x;
+  background-position: 0vw bottom;
+  z-index: -1;
+  animation: bg_ani 20s infinite linear;
+}
+
+.bg::before {
+  top: -300px;
+}
+
+.bg::after {
+  transform: rotate(180deg);
+}
+
+.sec3.bg::after {
+  top: 82vh;
+}
+
+footer.bg::before {
+  top: 298vh;
+}
+
+@keyframes bg_ani {
+  0% {
+    background-position: 0 bottom;
+  }
+  100% {
+    background-position: calc(100vw - 15px) bottom;
+  }
+}
+
+/******* 배경 애니메이션 끝 *******/
+/******* 배경 애니메이션 끝 *******/
